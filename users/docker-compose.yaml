@@ -1,0 +1,15 @@
+version: '3'
+services:
+  users_backend:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      MONGO_HOST: 'localhost'
+      RABBIT_HOST: 'localhost'
+      RABBIT_PORT: 10000
+    depends_on:
+      - mongo
+    network_mode: "host"
+  mongo:
+    image: "mongo:4-bionic"
