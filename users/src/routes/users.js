@@ -17,7 +17,7 @@ router.get('/:id',
   async (ctx) => {
     try {
       let result = await models.User.findOne({ id: ctx.params.id }, {id: 1, name: 1, age: 1, _id: 0}).exec();
-      result = await new Promise((resolve, reject) => {
+      result = await new Promise((resolve, _reject) => {
         communicator.sendRequest('balances', 'getBalanceById', { balanceId: ctx.params.id }, async (response) => {
           result = Object.assign({id: result.id, name: result.name, age: result.age}, { balance: response.balance });
           resolve(result);
