@@ -1,5 +1,5 @@
 # Dependencies
-- Docker & Docker Compose;
+- Docker & Docker Compose.
 
 # Installation and run
 ```sh
