@@ -5,11 +5,16 @@ services:
     ports:
       - "3000:3000"
     environment:
-      MONGO_HOST: 'localhost'
-      RABBIT_HOST: 'localhost'
-      RABBIT_PORT: 10000
+      MONGO_HOST: 'mongo'
+      RABBIT_HOST: 'rabbitmq'
     depends_on:
       - mongo
-    network_mode: "host"
+    networks:
+      - nodetest-net
   mongo:
     image: "mongo:4-bionic"
+    networks:
+      - nodetest-net
+networks:
+  nodetest-net:
+    driver: bridge

@@ -5,6 +5,8 @@
 ```sh
 $ git clone https://github.com/EliseevNP/nodetest
 $ cd nodetest
+$ sudo docker network create users_nodetest-net
+$ sudo docker network create balances_nodetest-net
 $ docker-compose build && docker-compose up -d
 $ cd users && docker-compose build && docker-compose up -d && cd ..
 $ cd balances && docker-compose build && docker-compose up -d && cd ..
