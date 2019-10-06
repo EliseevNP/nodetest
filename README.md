@@ -31,3 +31,7 @@ $ curl http://localhost:3001/balances/1
 ```
 
 > {"balance":100}
+
+## License
+
+MIT.
