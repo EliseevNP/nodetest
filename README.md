@@ -12,11 +12,10 @@ This application is example of [service-communicator](https://www.npmjs.com/pack
 ```sh
 $ git clone https://github.com/EliseevNP/nodetest
 $ cd nodetest
-$ sudo docker network create users_nodetest-net
-$ sudo docker network create balances_nodetest-net
-$ docker-compose build && docker-compose up -d
-$ cd users && docker-compose build && docker-compose up -d && cd ..
-$ cd balances && docker-compose build && docker-compose up -d && cd ..
+$ sudo docker network create service-communicator-example-net
+$ sudo docker-compose build && sudo docker-compose up -d
+$ cd users && sudo docker-compose build && sudo docker-compose up -d && cd ..
+$ cd balances && sudo docker-compose build && sudo docker-compose up -d && cd ..
 ```
 
 ## Usage

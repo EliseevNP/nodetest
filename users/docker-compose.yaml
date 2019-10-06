@@ -10,11 +10,11 @@ services:
     depends_on:
       - mongo
     networks:
-      - nodetest-net
+      - service-communicator-example-net
   mongo:
     image: "mongo:4-bionic"
     networks:
-      - nodetest-net
+      - service-communicator-example-net
 networks:
-  nodetest-net:
-    driver: bridge
+  service-communicator-example-net:
+    external: true

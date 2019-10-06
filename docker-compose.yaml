@@ -3,10 +3,7 @@ services:
   rabbitmq:
     image: "rabbitmq:3.8-rc-alpine"
     networks:
-      - users_nodetest-net
-      - balances_nodetest-net
+      - service-communicator-example-net
 networks:
-  users_nodetest-net:
-    external: true
-  balances_nodetest-net:
+  service-communicator-example-net:
     external: true
